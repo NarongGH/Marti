@@ -1,0 +1,116 @@
+@charset "utf-8";
+// ============================
+// 共通パーツ読み込み
+// ============================
+@import "_core";
+
+// ============================
+// 共通要素
+// ============================
+/*==============================
+共通要素
+==============================*/
+.wrap {
+	@include wrap();
+}
+
+// ============================
+// l-header
+// ============================
+/*==============================
+ヘッダー
+==============================*/
+.l-header {
+  width: 100%;
+
+  .header-top-bar{
+    font-size: 11px;
+    line-height: 24.04px;
+    color: #ffffff;
+    background: #67B823;
+    border-bottom: 3px solid #FB661D;
+    h1{
+      width: 960px;
+      margin: 0 auto;
+    }
+  }
+  .header-container{
+    width: 916px;
+    padding: 9px 16px 14px 28px;
+    margin: auto;
+    @include clearfix;
+    .header-logo{
+      float: left;
+    }
+    .header-contact{
+      float: right;
+      @include clearfix;
+      .header-search{
+        @include clearfix;
+        position: relative;
+        input[type="text"]{
+          border: 1px solid #CEBFA4;
+          @include border-radius(17px);
+          width: 218px;
+          font-size: 17px;
+          padding: 5px;
+          float: right;
+          position: absolute;
+          right: 50px;
+          z-index: 2;
+          outline: none;
+          @include box-shadow(inset 3px 3px 3px rgba(0,0,0, .08));
+        }
+        input[type="submit"]{
+          outline: none;
+          font-family: Meiryo;
+          float: right;
+          font-weight: bold;
+          background: #73E7FA;
+          border: 1px solid #CEBFA4;
+          @include border-radius(17px);
+          font-size: 13px;
+          line-height: 18px;
+          padding: 6px 0;
+          width: 88px;
+          z-index: 1;
+          text-indent: 30px;
+        }
+      }
+      p{
+        font-size: 12px;
+        line-height: 14px;
+        font-family: Meiryo;
+        color: #666666;
+        margin: 20px 0 0;
+      }
+    }
+  }
+}
+
+// ============================
+// l-navi
+// ============================
+/*==============================
+グローバルナビ
+==============================*/
+.l-navi {
+}
+
+// ============================
+// l-contents
+// ============================
+/*==============================
+コンテンツ
+==============================*/
+.l-contents {
+}
+
+// ============================
+// l-footer
+// ============================
+/*==============================
+フッター
+==============================*/
+.l-footer {
+}

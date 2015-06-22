@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* General */
+.float-list, .cf {
+  *zoom: 1;
+}
+.float-list:after, .cf:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.float-list li {
+  float: left;
+}
+
+/* Base */
+body {
+  font-family: 'Meiryo', 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', 'sans-serif';
+}
+
+/* Layout */
+/*==============================
+共通要素
+==============================*/
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/*==============================
+ヘッダー
+==============================*/
+.l-header {
+  width: 100%;
+}
+.l-header .header-top-bar {
+  font-size: 11px;
+  line-height: 24.04px;
+  color: #ffffff;
+  background: #67B823;
+  border-bottom: 3px solid #FB661D;
+}
+.l-header .header-top-bar h1 {
+  width: 960px;
+  margin: 0 auto;
+}
+.l-header .header-container {
+  width: 916px;
+  padding: 9px 16px 14px 28px;
+  margin: auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+.l-header .header-container .header-logo {
+  float: left;
+}
+.l-header .header-container .header-contact {
+  float: right;
+  overflow: hidden;
+  *zoom: 1;
+}
+.l-header .header-container .header-contact .header-search {
+  overflow: hidden;
+  *zoom: 1;
+  position: relative;
+}
+.l-header .header-container .header-contact .header-search input[type="text"] {
+  border: 1px solid #CEBFA4;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  border-radius: 17px;
+  width: 218px;
+  font-size: 17px;
+  padding: 5px;
+  float: right;
+  position: absolute;
+  right: 50px;
+  z-index: 2;
+  outline: none;
+  -moz-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.08);
+}
+.l-header .header-container .header-contact .header-search input[type="submit"] {
+  outline: none;
+  font-family: Meiryo;
+  float: right;
+  font-weight: bold;
+  background: #73E7FA;
+  border: 1px solid #CEBFA4;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  border-radius: 17px;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 6px 0;
+  width: 88px;
+  z-index: 1;
+  text-indent: 30px;
+}
+.l-header .header-container .header-contact p {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: Meiryo;
+  color: #666666;
+  margin: 20px 0 0;
+}
+
+/*==============================
+グローバルナビ
+==============================*/
+/*==============================
+コンテンツ
+==============================*/
+/*==============================
+フッター
+==============================*/
