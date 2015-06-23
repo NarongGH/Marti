@@ -13,6 +13,17 @@
 .wrap {
 	@include wrap();
 }
+// ============================
+// Icon fonts
+// =============================
+@font-face {
+  font-family: 'Marti';
+  src:url('assets/fonts/marti.eot?i68nb2');
+  src:url('assets/fonts/marti.eot?#iefixi68nb2') format('embedded-opentype'),
+  url('assets/fonts/marti.ttf?i68nb2') format('truetype'),
+  url('assets/fonts/marti.woff?i68nb2') format('woff'),
+  url('assets/fonts/marti.svg?i68nb2#icomoon') format('svg');
+}
 
 // ============================
 // l-header
@@ -113,7 +124,10 @@
 ==============================*/
 .l-contents {
   .wrap{
+    width: 1040px;
+    @extend %extend-cf;
     .l-side{
+      float: left;
       .l-navi {
         width: 226px;
         border: 1px solid #cccccc;
@@ -121,18 +135,57 @@
         @include border-radius(5px);
         ul{
           li{
-            margin: 0 7px;
-            cursor: pointer;
-            background: url('assets/img/layout/side/navi/navi_hr.png') no-repeat;
-            background-position: top center;
-            &:first-child, &:first-child:hover{
-              background: none;
-            }
+            margin: 4px 7px;
+            @include border-radius(5px);
+            padding: 10px 7px;
+            position: relative;
             &:hover{
-              background: #67b822 url('assets/img/layout/side/navi/navi_hr.png') no-repeat;
+              background: #67b822;
+              a{
+                color: #ffffff;
+              }
             }
-            img{
+            &.active{
+              background: #67b822;
+              &:after{
+                color: #ffffff;
+              }
+              color: #ffffff;
+              a{
+                color: #ffffff;
+              }
             }
+            &:hover:after{
+              color: #ffffff;
+            }
+            &:after{
+              content: '\25b6';
+              color: #67b822;
+              position: absolute;
+              right: 10px;
+            }
+            &.icon-home{
+              text-transform: uppercase;
+              &:before{
+                color: #ffffff;
+                font-size: 20px;
+              }
+            }
+            a{
+              text-decoration: none;
+              padding: 0 0 0 12px;
+              font-size: 18px;
+              color: #000000;
+              font-family: Meiryo;
+              @include text-shadow(1px 1px 1px rgba(0,0,0,.2));
+            }
+            
+          }
+          span.navi-separator{
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: url("assets/img/layout/side/navi/navi_hr.png") no-repeat;
           }
         }
       }
@@ -144,7 +197,8 @@
           li{
             padding: 0 13px;
             a{
-
+              font-weight: bold;
+              font-size: 18px;
             }
           }
         }
@@ -157,6 +211,29 @@
           margin: auto;
         }
       }
+    }
+  }
+  .l-top-content{
+    float: left;
+    @extend %extend-cf;
+    .top-buy{
+      float: left;
+      ul{
+        li{
+          padding: 2px 0;
+          a{
+            margin-top: -20px;
+           span{
+             padding-top: 20px;
+             display: inline-block;
+             font-size: 20px;
+           }
+          }
+        }
+      }
+    }
+    .top-rent{
+      float: left;
     }
   }
 }

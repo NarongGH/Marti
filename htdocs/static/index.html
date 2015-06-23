@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
@@ -42,12 +44,17 @@
             <aside class="l-side">
                 <nav class="l-navi">
                     <ul>
-                        <li><a href="#"><img src="assets/img/layout/side/navi/navi_home.png" width="212" height="41" alt=""/></a></li>
-                        <li><a href="#"><img src="assets/img/layout/side/navi/navi_upload.png" width="212" height="46" alt=""/></a></li>
-                        <li><a href="#"><img src="assets/img/layout/side/navi/navi_download.png" width="212" height="47" alt=""/></a></li>
-                        <li><a href="#"><img src="assets/img/layout/side/navi/navi_profile.png" width="212" height="46" alt=""/></a></li>
-                        <li><a href="#"><img src="assets/img/layout/side/navi/navi_list.png" width="212" height="41" alt=""/></a></li>
-                        <li><a href="#"><img src="assets/img/layout/side/navi/navi_phone.png" width="212" height="41" alt=""/></a></li>
+                        <li class="icon-home active"><a href="#">Home</a></li>
+                        <span class="navi-separator"></span>
+                        <li class="icon-out"><a href="#">売買</a></li>
+                        <span class="navi-separator"></span>
+                        <li class="icon-in"><a href="#">賃貸</a></li>
+                        <span class="navi-separator"></span>
+                        <li class="icon-user"><a href="#">スタッフ紹介</a></li>
+                        <span class="navi-separator"></span>
+                        <li class="icon-clipboard"><a href="#">店舗概要</a></li>
+                        <span class="navi-separator"></span>
+                        <li class="icon-phone2"><a href="#">お問い合せ</a></li>
                     </ul>
                 </nav>
                 <nav class="side-shop">
@@ -60,18 +67,10 @@
                     </p>
                     <div class="side-shop-menu">
                         <ul>
-                            <li><a
-                                    href="#"><img src="assets/img/layout/side/side_user.png" onmouseover="this.src='assets/img/layout/side/side_user_hover.png'" onmouseout="this.src='assets/img/layout/side/side_user.png'" width="200" height="50" alt=""/></a></li>
-                            <li><a href="#"><img src="assets/img/layout/side/side_access_map.png" onmouseover="this.src='assets/img/layout/side/side_access_map_hover.png'"
-                                                 onmouseout="this.src='assets/img/layout/side/side_access_map.png'"  width="200"
-                                                 height="50"
-                                                 alt=""/></a></li>
-                            <li><a
-                                    href="#"><img src="assets/img/layout/side/side_about.png" onmouseover="this.src='assets/img/layout/side/side_about_hover.png'" onmouseout="this.src='assets/img/layout/side/side_about.png'" width="200" height="50"
-                                                  alt=""/></a></li>
-                            <li><a
-                                    href="#"><img src="assets/img/layout/side/side_contact.png" onmouseover="this.src='assets/img/layout/side/side_contact_hover.png'" onmouseout="this.src='assets/img/layout/side/side_contact.png'" width="200" height="50"
-                                                  alt=""/></a></li>
+                            <li><a href="#"><img src="assets/img/layout/side/side_user_off.png" width="200" height="50" alt=""/></a></li>
+                            <li><a href="#"><img src="assets/img/layout/side/side_access_map_off.png"  width="200" height="50" alt=""/></a></li>
+                            <li><a href="#"><img src="assets/img/layout/side/side_about_off.png" width="200" height="50" alt=""/></a></li>
+                            <li><a href="#"><img src="assets/img/layout/side/side_contact_off.png"  width="200" height="50" alt=""/></a></li>
                         </ul>
                     </div>
                     <p class="side-text">※当サイトに掲載されていない売買物
@@ -88,7 +87,20 @@
                 </nav>
             </aside>
             <section class="l-top-content">
-
+                <div class="top-buy">
+                    <div class="top-title-buy">
+                        <img src="assets/img/top/top_title_buy.png" width="342" height="55" alt=""/>
+                    </div>
+                    <ul>
+                        <li><a class="icon-list" href="#">一覧を見る</a></li>
+                        <li><a class="icon-location" href="#">一覧を見る</a></li>
+                    </ul>
+                </div>
+                <div class="top-rent">
+                    <div class="top-title-buy">
+                        <img src="assets/img/top/top_title_rent.png" width="340" height="55" alt=""/>
+                    </div>
+                </div>
             </section>
         </div>
     </section><!--.l-contents-->

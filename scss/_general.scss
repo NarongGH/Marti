@@ -44,3 +44,59 @@ $floatListStyle: true;
   padding: 13px 10px;
   line-height: 1.2;
 }
+// ================
+// Icon Classes
+// ================
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Marti';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e600";
+}
+.icon-out:before {
+  content: "\e601";
+}
+.icon-in:before {
+  content: "\e602";
+}
+.icon-user:before {
+  content: "\e603";
+}
+.icon-time:before {
+  content: "\e60d";
+}
+.icon-location:before {
+  content: "\e60e";
+}
+.icon-phone2:before {
+  content: "\e60f";
+}
+.icon-smiley:before {
+  content: "\e610";
+}
+.icon-list:before {
+  content: "\e611";
+}
+.icon-bus:before {
+  content: "\e612";
+}
+.icon-clipboard:before {
+  content: "\e613";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-play-arrow:before {
+  content: "\e01b";
+}

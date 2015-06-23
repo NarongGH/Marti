@@ -57,10 +57,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* General */
-.float-list, .cf {
+.float-list, .l-contents .wrap, .l-contents .l-top-content, .cf {
   *zoom: 1;
 }
-.float-list:after, .cf:after {
+.float-list:after, .l-contents .wrap:after, .l-contents .l-top-content:after, .cf:after {
   content: "";
   display: block;
   clear: both;
@@ -91,6 +91,71 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 1.2;
 }
 
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'Marti';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e600";
+}
+
+.icon-out:before {
+  content: "\e601";
+}
+
+.icon-in:before {
+  content: "\e602";
+}
+
+.icon-user:before {
+  content: "\e603";
+}
+
+.icon-time:before {
+  content: "\e60d";
+}
+
+.icon-location:before {
+  content: "\e60e";
+}
+
+.icon-phone2:before {
+  content: "\e60f";
+}
+
+.icon-smiley:before {
+  content: "\e610";
+}
+
+.icon-list:before {
+  content: "\e611";
+}
+
+.icon-bus:before {
+  content: "\e612";
+}
+
+.icon-clipboard:before {
+  content: "\e613";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-play-arrow:before {
+  content: "\e01b";
+}
+
 /* Base */
 body {
   font-family: 'Meiryo', 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', 'sans-serif';
@@ -105,6 +170,11 @@ body {
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: 'Marti';
+  src: url("assets/fonts/marti.eot?i68nb2");
+  src: url("assets/fonts/marti.eot?#iefixi68nb2") format("embedded-opentype"), url("assets/fonts/marti.ttf?i68nb2") format("truetype"), url("assets/fonts/marti.woff?i68nb2") format("woff"), url("assets/fonts/marti.svg?i68nb2#icomoon") format("svg");
+}
 /*==============================
 ヘッダー
 ==============================*/
@@ -196,6 +266,12 @@ body {
 /*==============================
 コンテンツ
 ==============================*/
+.l-contents .wrap {
+  width: 1040px;
+}
+.l-contents .wrap .l-side {
+  float: left;
+}
 .l-contents .wrap .l-side .l-navi {
   width: 226px;
   border: 1px solid #cccccc;
@@ -205,16 +281,58 @@ body {
   border-radius: 5px;
 }
 .l-contents .wrap .l-side .l-navi ul li {
-  margin: 0 7px;
-  cursor: pointer;
-  background: url("assets/img/layout/side/navi/navi_hr.png") no-repeat;
-  background-position: top center;
-}
-.l-contents .wrap .l-side .l-navi ul li:first-child, .l-contents .wrap .l-side .l-navi ul li:first-child:hover {
-  background: none;
+  margin: 4px 7px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 7px;
+  position: relative;
 }
 .l-contents .wrap .l-side .l-navi ul li:hover {
-  background: #67b822 url("assets/img/layout/side/navi/navi_hr.png") no-repeat;
+  background: #67b822;
+}
+.l-contents .wrap .l-side .l-navi ul li:hover a {
+  color: #ffffff;
+}
+.l-contents .wrap .l-side .l-navi ul li.active {
+  background: #67b822;
+  color: #ffffff;
+}
+.l-contents .wrap .l-side .l-navi ul li.active:after {
+  color: #ffffff;
+}
+.l-contents .wrap .l-side .l-navi ul li.active a {
+  color: #ffffff;
+}
+.l-contents .wrap .l-side .l-navi ul li:hover:after {
+  color: #ffffff;
+}
+.l-contents .wrap .l-side .l-navi ul li:after {
+  content: '\25b6';
+  color: #67b822;
+  position: absolute;
+  right: 10px;
+}
+.l-contents .wrap .l-side .l-navi ul li.icon-home {
+  text-transform: uppercase;
+}
+.l-contents .wrap .l-side .l-navi ul li.icon-home:before {
+  color: #ffffff;
+  font-size: 20px;
+}
+.l-contents .wrap .l-side .l-navi ul li a {
+  text-decoration: none;
+  padding: 0 0 0 12px;
+  font-size: 18px;
+  color: #000000;
+  font-family: Meiryo;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.l-contents .wrap .l-side .l-navi ul span.navi-separator {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: url("assets/img/layout/side/navi/navi_hr.png") no-repeat;
 }
 .l-contents .wrap .l-side .side-shop {
   border: 1px solid #cccccc;
@@ -226,6 +344,10 @@ body {
 .l-contents .wrap .l-side .side-shop ul li {
   padding: 0 13px;
 }
+.l-contents .wrap .l-side .side-shop ul li a {
+  font-weight: bold;
+  font-size: 18px;
+}
 .l-contents .wrap .l-side .side-qr {
   border: 1px solid #cccccc;
   width: 226px;
@@ -233,6 +355,26 @@ body {
 .l-contents .wrap .l-side .side-qr img {
   display: block;
   margin: auto;
+}
+.l-contents .l-top-content {
+  float: left;
+}
+.l-contents .l-top-content .top-buy {
+  float: left;
+}
+.l-contents .l-top-content .top-buy ul li {
+  padding: 2px 0;
+}
+.l-contents .l-top-content .top-buy ul li a {
+  margin-top: -20px;
+}
+.l-contents .l-top-content .top-buy ul li a span {
+  padding-top: 20px;
+  display: inline-block;
+  font-size: 20px;
+}
+.l-contents .l-top-content .top-rent {
+  float: left;
 }
 
 /*==============================
